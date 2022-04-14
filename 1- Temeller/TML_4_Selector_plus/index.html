@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>JQuery - Icabi Kırgız</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body> 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+      // JQuery Selector +
+        // :button ->   Butonları seçer
+        // :radio ->    Radio buttonlarını seçer
+        // :submit ->   Submitleri seçer
+        // :file ->     Dosyaları seçer
+        // :focus ->    imlecimizdeki seçili olanları seçer
+        // :image ->    Form nesnesinde resimleri seçer
+        // :header ->   h1/h2/h3/h4 yapılarını seçer.
+        // :checkbox -> Checkboxları
+        // :checked ->  Seçili alanları
+        // :input ->    İnput alanlarını
+        // :empty ->    Boş olanları
+        // :last ->     Son elemanı
+        // :first ->    İlk elemanı
+        // :reset ->    Formlarda reset olanları
+        // :password -> Parola olanları
+        // contains() ->İçinde var mı yok mu sorusu [$("p:contains(deneme)")]
+        // has() ->     İçinde var mı sorusu        [$("div:has(h1)")]
+        // not() ->     Belirtilenlerin dışında olan
+
+      // Multi selectors
+        // $(".class-deneme, #id-deneme, p").css() -> "," ile ayrılır.
+    </script>
+
+    <p>Birinci P etiketi</p>
+    <p>İkinci P etiketi</p>
+    <p>Ucuncu P etiketi</p>
+    <ul>
+      <li>Elemanlar</li>
+      <li>Elemanlar</li>
+      <li>Elemanlar</li>
+      <li>Elemanlar</li>
+    </ul>
+
+    <input type="radio">
+    <button id="radio">Tıkla</button>
+
+    <script>
+      // .css -> CSS özelliklerini vermek için kullanılır.
+
+        $("p").css("color", "red");
+        $("p").css("backgroundColor", "grey");
+
+        // Click efekti
+        $("#radio").click(function(){
+          $(":radio").css("width","105px").css("height","105");
+        });
+    </script>
+
+
+    </body> 
+</html>

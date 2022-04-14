@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>JQuery - Icabi Kırgız</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+      // filter
+        // first()    -> İlk yapıyı getirir.
+        // last()     -> Son yapıyı getirir.
+        // eq(indis)  -> (indis) numarasındaki yapıyı getirir.
+        // filter()   -> Gelişmiş seçim yapma alanı
+        // not()      -> Değil
+    </script>
+    <div class="m-5">
+      <!-- ul>li*7>b{item $} -->
+      <ul>
+        <li id="baslangic"><b>Baslangic</b></li>
+        <li><b>item 2</b></li>
+        <li><b>item 3</b></li>
+        <li id="orta"><b>Orta</b></li>
+        <li><b>item 5</b></li>
+        <li><b>item 6</b></li>
+        <li id="bitis"><b>Bitis</b></li>
+      </ul>
+      <button id="first" class="btn btn-primary">first</button>
+      <button id="last"class="btn btn-secondary">last()</button>
+      <button id="eq3"class="btn btn-info">eq(3)</button>
+      <button id="filter"class="btn btn-warning">filter()</button>
+      <button id="not"class="btn btn-danger">not()</button>
+
+    </div>
+    <script>
+      // first();
+      $("#first").click(function(){
+        $("ul li").first().css("color","blue");
+      });
+      // last();
+      $("#last").click(function(){
+        $("ul li").last().css("color","grey");
+      });
+      // eq();
+      $("#eq3").click(function(){
+        $("ul li").eq(3).css("color","cyan"); // 0'dan başlar
+      });
+      // filter();
+      $("#filter").click(function(){
+        $("ul li").filter("#orta, #bitis").css("color","red"); // selector mantığında seçim yaptırır.
+      });
+      // not();
+      $("#not").click(function(){
+        $("ul li").not("#orta, #baslangic, #bitis").css("color","red"); // selector mantığının seçim yaptırır (olmayanı alır.)
+      });
+    </script>
+    </body> 
+</html>

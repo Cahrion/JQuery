@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>JQuery - Icabi Kırgız</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+      // append() -> içeriğin sonuna ekler.
+      // prepend() -> içeriğin önüne ekler.
+      // after() -> içerik alanından sonra ekler.
+      // before() -> içerik alnından önce ekler.
+    </script>
+    <div class="m-5 container">
+      <ul>
+        <li>HTML 5</li>
+        <li>CSS 3</li>
+        <li>Bootstrap</li>
+        <li>jQuery</li>
+      </ul>
+      <br>
+      <button id="bas_id" class="btn btn-secondary">Başına ekle</button>
+      <button id="son_id" class="btn btn-secondary">Sonuna ekle</button>
+      <button id="dis_bas_id" class="btn btn-secondary">Dış başına ekle</button>
+      <button id="dis_son_id" class="btn btn-secondary">Dış sonuna ekle</button>
+    </div>
+    <script>
+      $("#bas_id").click(function(){
+        $("ul").prepend("<b style='color:red'>--</b>");
+      })
+      $("#son_id").click(function(){
+        $("ul").append("<b style='color:red'>--</b>");
+      })
+      $("#dis_bas_id").click(function(){
+        $("ul").before("<b style='color:red'>--</b>");
+      })
+      $("#dis_son_id").click(function(){
+        $("ul").after("<b style='color:red'>--</b>");
+      })
+    </script>
+    </body> 
+</html>

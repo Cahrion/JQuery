@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>JQuery - Icabi Kırgız</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+      // fade() -> Animasyonlu Göster || gizle
+        // $(selector).fadeln();      --> Animasyonlu göster
+        // $(selector).fadeOut();     --> Animasyonlu gizle
+        // $(selector).fadeToggle();  --> Animasyonlu gizle veya göster
+        // $(selector).fadeTo();      --> Anismasyonlu şunu yap
+          // $(selector).fadeIn("fast");      --> Anismasyonlu hızlı aç
+          // $(selector).fadeIn("slow");      --> Anismasyonlu yavaş aç
+          // $(selector).fadeIn(2000);        --> Anismasyonlu 2sn'de aç
+          // ...
+      </script>
+
+      <div class="m-5">
+        <p id="metin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, eius.</p>
+        <button class="btn btn-primary" id="fadeIn">Fade Open</button>
+        <button class="btn btn-primary" id="fadeOut">Fade Close</button>
+        <button class="btn btn-primary" id="fadeToggle">Fade Toggle</button>
+        <button class="btn btn-primary" id="fadeTo">Fade To</button>
+      </div>
+      
+      <script>
+        $("#fadeIn").click(function(){
+          // $("#metin").fadeIn();
+          // $("#metin").fadeIn("slow");
+          // $("#metin").fadeIn(2000);
+          $("#metin").fadeIn(2000, function(){
+            alert("Ne haber");
+          });
+        });
+        $("#fadeOut").click(function(){
+          // $("#metin").fadeOut();
+          // $("#metin").fadeOut("slow");
+          // $("#metin").fadeOut(2000);
+          $("#metin").fadeOut(2000, function(){
+            alert("Ne haber");
+          });
+        });
+        $("#fadeToggle").click(function(){
+          // $("#metin").fadeToggle();
+          // $("#metin").fadeToggle("slow");
+          // $("#metin").fadeToggle(2000);
+          $("#metin").fadeToggle(2000, function(){
+            alert("Ne Haber");
+          })
+        });
+        $("#fadeTo").click(function(){
+          // $("#metin").fadeTo("slow", "0.7"); // Verilen opacity değerine geçirir (animasyonlu)
+          $("#metin").fadeTo("slow", "0.3");
+        });
+      </script>
+    </body> 
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>JQuery - Icabi Kırgız</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body> 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ 
+    <script>
+      // JQuery Selectors
+
+        // <p>Deger<p>
+        // $('p').action(); 
+
+      // Üstteki "p" tağına bu şekilde ulaşılıyor. 
+
+        // tag -> $('p').action(); 
+        // class -> $('.ClassDegeri').action(); 
+        // id -> $('#idDegeri').action(); 
+        // Hepsi -> $('*').action(); 
+        // Tıklanan -> $(this).action(); 
+
+        // Birden fazla tag varsa ilkine
+        // -> $(p:first).action(); 
+    </script>
+
+    <p>Normal Tag</p>
+    <p id="Ozel">Id Ile Donatılmış Tag</p>
+    <p class="Ozel">Class Ile Donatılmış Tag</p>
+    <ul>
+      <li>eleman 1</li>
+      <li>eleman 2</li>
+      <li>eleman 3</li>
+    </ul>
+
+    <button>Tıkla</button>
+
+    <script>
+      // .click ->  Tıklanmayla aktif olur.
+      // .hide ->   Gizli hale geçirir.
+
+      $("button").click(function (){
+
+        // $('p').hide(); // Bütün "p" tagları için
+        // $('#Ozel').hide(); // Sadece "p" id değeri için
+        // $('.Ozel').hide(); // Sadece "p" class değeri için
+        // $('*').hide(); // Bütün Yapılar için
+
+        // $('ul li').hide(); // "ul" tagının altındaki "li" yapıları için
+        // $('ul li:first').hide(); // "ul" tagının altındaki "li" yapılarından birincisi için
+        // $('ul li:first-child').hide(); // "ul" tagının altındaki "li" yapılarından birinci cocugu için
+        // $('ul li:even').hide(); // "ul" tagının altındaki "li" yapılarından tekli olanlar için
+        $('ul li:odd').hide(); // "ul" tagının altındaki "li" yapılarından çiftli olanlar için
+
+      });
+    </script>
+
+
+
+
+
+    </body>
+</html>

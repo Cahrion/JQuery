@@ -1,0 +1,184 @@
+
+
+/*
+    rem = html{font-size: 10px;} div p{font-size: 2rem;} (20px)
+    em  = body{font-size: 13px;} div p{font-size: 2em;} (26px)
+*/
+/* common config */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px; /* rem */
+}
+
+body {
+    font-family: 'Roboto', sans-serif, Arial, Helvetica;
+    background-color: rgb(13, 32, 18);
+    text-align: center;
+    line-height: 1.7;
+    color: #fff;
+    font-size: 1.7rem;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 75%;
+    height: auto;
+    text-align: center;
+    border: 1px solid black;
+    transition: all 1s;
+
+}
+img:hover{
+    transform: scale(1.2);
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 0 5px white;
+}
+
+#division-2-list ul{
+    list-style-type: none;
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+/* container */
+.meContainer{
+    width: 120rem;
+    margin: 0 auto;
+    padding: 0 .6rem;
+    background-color: red;
+}
+/* navbar  */
+
+nav{
+    background-color: #007bff;
+    color: #fff;
+    height: auto;
+}
+.btk-akademi{
+    color: #fff;
+    font-size: 3.4rem;
+    float: left;
+}
+#logo{
+    float: left;
+}
+#menu{
+    float: right;
+}
+#menu li{
+    display: inline-block;
+    margin: .5rem;
+    padding: .5rem;
+}
+#menu li a{
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: .3rem;
+    transition: all 3s;
+}
+#menu a:hover{
+    color: ;
+}
+/* header */
+header{
+    position: relative;
+    height: 80rem;
+}
+header .image-header{
+    position: absolute;
+    height: 80rem;
+    width: 100%;
+    background-image: url(../image/yazilim.jpg) ;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.4;
+    background-position: center;
+    background-size: cover;
+}
+header h1{
+    padding: 24rem 12rem 2rem 12rem;
+    text-transform: uppercase;
+}
+p{
+    padding: 3rem;
+}
+.btn-header{
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    display: inline-block;
+    padding: 1.7rem;
+    font-weight: 400;
+    transition: all 0.4s;
+    text-align: center;
+    border: 1px solid rgb(255,212,59);
+    background-color: #007bff;
+    margin: .6rem 0;
+    white-space: nowrap;
+}
+.btn-header:hover{
+    color: #007bff;
+    text-decoration: none;
+    background-color: #fff;
+    box-shadow: 0px 0px 25px black;
+}
+
+/* section 1  */
+
+#division-1-main{
+    background-color: grey;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* section 2   */
+.area-div{
+    padding: 1.4rem;
+}
+#division-2-list{
+    background-color: #fff;
+    color: #234;
+}
+#division-2-list h3{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* section - 3 */
+
+#division-3-career{
+    width: 100%;
+    height: 50rem;
+    margin: 2rem 0;
+}
+
+#left-main{
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-color: tomato;
+}
+
+#right-main{
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-color: yellow;
+}
+#right-main>ul{
+    list-style-type: none;
+}

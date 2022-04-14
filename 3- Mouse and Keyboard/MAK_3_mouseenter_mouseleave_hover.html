@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>JQuery - Icabi Kırgız</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+      // mouseenter() -> Fare giriş yaptığında
+      // mouseleave() -> Fare çıkış yaptığında
+      // hover() -> Fare çıkış veya giriş yaptığında
+    </script>
+      <div class="m-5">
+        <button class="btn btn-secondary" id="mousesquare" style="width: 400px;height:400px">Mouse square</button>
+        <p id="metin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, quia!</p>
+        <br>
+      </div>
+      <script>
+       $("#mousesquare").mouseenter(function(){ // Mouse Enter
+        $("#metin").after("<p class='bg-success m-2 p-2'>Mouse giriş yaptı.</p>");
+       });
+       $("#mousesquare").mouseleave(function(){ // Mouse Leave
+        $("#metin").after("<p class='bg-danger m-2 p-2'>Mouse çıkış yaptı.</p>");
+       })
+       $("#mousesquare").hover(function(){ // Hover
+        $("#metin").after("<p class='bg-secondary m-2 p-2'>Hover çalıştı</p>");
+       })
+      </script>
+    </body> 
+</html>

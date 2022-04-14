@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>JQuery - Icabi Kırgız</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+      // clone()  -> Klonlama işlemi yapılır.
+      // detach() -> Kaldırma işlemi yapılır.
+      // on()     -> Birden çok işlem yapmamıza fırsat sağlar.
+    </script>
+    <div class="m-5">
+      <p class="metin">Btk Akademi jQuery Full stack</p>
+      <button id="clone" class="btn btn-primary">Clone Yap</button>
+      <button id="detach" class="btn btn-primary">Detach Yap</button>
+    </div>
+    <script>
+      $(".metin").on({
+        mouseenter: function(){
+          $(".metin").css("color", "green").html("<b> Mouse Giriş Yaptı. </b>");
+        },
+        mouseleave: function(){
+          $(".metin").css("color", "red").html("<b> Mouse Çıkış Yaptı. </b>");
+        }
+      });
+      $("#clone").click(function(){
+        var deger = $("p").clone();
+        $("div").after(deger);
+      });
+      $("#detach").click(function(){
+        $(".metin").detach();
+      });
+    </script>
+    </body> 
+</html>

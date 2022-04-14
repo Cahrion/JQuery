@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>JQuery - Icabi Kırgız</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+      // $.get() -> Gidilen verideki bilgileri listeler.
+          // $.get(url, function(veri, durum){})
+    
+    </script>
+    <div class="m-5 container">
+      <table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>productName</th>
+            <th>quantityPerUnit</th>
+            <th>unitPrice</th>
+            <th>unitsInStock</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <button class="btn btn-primary" id="ajaxGet">Verileri Listele</button>
+    </div>
+    <script>
+      $("#ajaxGet").click(function(){
+        // $.ajax.done().fail();
+        $.ajax({
+          method: "GET",
+          url: "http://localhost:3000/products",
+        })
+        .done(function(veriler, status){
+          for(var veri in veriler){
+            var html = `
+              <tr>
+                <td>` + veriler[veri].id + `</td>
+                <td>` + veriler[veri].productName + `</td>
+                <td>` + veriler[veri].quantityPerUnit + `</td>
+                <td>` + veriler[veri].unitPrice + `</td>
+                <td>` + veriler[veri].unitsInStock + `</td>
+              </tr>
+            `
+            $("tbody").append(html);
+          }
+        })
+        .fail(function(){
+          document.write("Hata: 404")
+        });
+
+      });
+    </script>
+    </body> 
+</html>
